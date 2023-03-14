@@ -6,4 +6,4 @@ resources:
 
 images:
 - name: ghcr.io/ajaytikoo/demo-app
-  newTag: latest
+  newTag: d6a683a6e2f2365af238adaec5288bd4b6dd130a
