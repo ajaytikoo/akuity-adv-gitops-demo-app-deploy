@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-app
+spec:
+  ports:
+  - port: 80
+    targetPort: 8080
+  selector:
+    app: demo-app
+  type: ClusterIP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-app
+  template:
+    metadata:
+      labels:
+        app: demo-app
+    spec:
+      containers:
+      - image: ghcr.io/ajaytikoo/demo-app:9cc6b26f2e678af11593e7126c4306903803ecd9
+        name: demo-app
+        ports:
+        - containerPort: 8080
