@@ -1,1 +1,3 @@
 image: ghcr.io/ajaytikoo/demo-app:b3d30a62f429c94434d9692d865979ea7e52356e
+
+env: stage
