@@ -3,3 +3,6 @@ kind: Kustomization
 
 resources:
 - ../../base
+images:
+- name: ghcr.io/ajaytikoo/demo-app
+  newTag: 9cc6b26f2e678af11593e7126c4306903803ecd9
